@@ -64,6 +64,7 @@ model Order {
   total Int
 
   items OrderItem[]
+  status String
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
