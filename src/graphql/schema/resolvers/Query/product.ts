@@ -4,7 +4,7 @@ import type { QueryResolvers } from "./../../../types.generated";
 export const product: NonNullable<QueryResolvers["product"]> = async (
   _parent,
   arg,
-  _ctx
+  _ctx,
 ) => {
   /* Implement Query.product resolver logic here */
   const product = await prisma.product.findUnique({
