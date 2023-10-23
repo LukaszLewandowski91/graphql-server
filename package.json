@@ -17,6 +17,7 @@
     "@faker-js/faker": "^8.2.0",
     "@graphql-codegen/cli": "^5.0.0",
     "graphql": "^16.8.1",
+    "mysql": "^2.18.1",
     "prettier": "^3.0.3",
     "prisma": "^5.4.2",
     "tsx": "^3.14.0",
