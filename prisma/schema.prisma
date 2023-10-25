@@ -6,7 +6,7 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "mysql"
   url      = env("DATABASE_URL")
 }
 model Product {
@@ -58,13 +58,20 @@ model OrderItem {
   updatedAt DateTime @updatedAt
 }
 
+enum OrderStatus {
+  CREATED
+  PAID
+  CANCELLED
+  SHIPPED
+  DELIVERED
+}
 
 model Order {
   id String @id @default(uuid())
   total Int
 
   items OrderItem[]
-  status String
+  status OrderStatus 
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
